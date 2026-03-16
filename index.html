@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Photo App Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Prototype</p>
+        <h1>Product Photo App</h1>
+        <p class="intro">
+          A simple MVP flow for selecting product images, reviewing the set,
+          checking a future result, and saving it.
+        </p>
+      </header>
+
+      <nav class="flow-nav" aria-label="App flow">
+        <button class="flow-tab is-active" data-screen-target="selection">
+          1. Image Selection
+        </button>
+        <button class="flow-tab" data-screen-target="gallery">
+          2. Selected Images
+        </button>
+        <button class="flow-tab" data-screen-target="result">
+          3. Result View
+        </button>
+        <button class="flow-tab" data-screen-target="save">
+          4. Save
+        </button>
+      </nav>
+
+      <section class="screen is-active" id="selection" aria-labelledby="selection-title">
+        <div class="screen-copy">
+          <p class="screen-step">Step 1</p>
+          <h2 id="selection-title">Image selection</h2>
+          <p>
+            Choose 3 to 5 product photos to prepare for a future merge step.
+          </p>
+        </div>
+
+        <div class="panel">
+          <label class="upload-box" for="image-input">
+            <span class="upload-title">Add product photos</span>
+            <span class="upload-text">Select 3 to 5 images from your device</span>
+          </label>
+          <input id="image-input" type="file" accept="image/*" multiple />
+          <p class="selection-status" id="selection-status">
+            No images selected yet.
+          </p>
+          <button class="primary-button" data-screen-target="gallery">
+            Continue to selected images
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" id="gallery" aria-labelledby="gallery-title">
+        <div class="screen-copy">
+          <p class="screen-step">Step 2</p>
+          <h2 id="gallery-title">Selected image list</h2>
+          <p>
+            This area will show the images chosen by the user in a simple grid.
+          </p>
+        </div>
+
+        <div class="panel">
+          <p class="gallery-status" id="gallery-status">
+            Select 3 to 5 images to preview them here.
+          </p>
+          <div class="image-grid" id="image-grid" aria-label="Selected image previews">
+          </div>
+          <button class="primary-button" data-screen-target="result">
+            Continue to result view
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" id="result" aria-labelledby="result-title">
+        <div class="screen-copy">
+          <p class="screen-step">Step 3</p>
+          <h2 id="result-title">Result view</h2>
+          <p>
+            The final composed image will appear here after processing is added.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="result-placeholder" aria-label="Result placeholder">
+            Result preview placeholder
+          </div>
+          <p class="placeholder-note">
+            Image processing is not implemented in this step.
+          </p>
+          <button class="primary-button" data-screen-target="save">
+            Continue to save
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" id="save" aria-labelledby="save-title">
+        <div class="screen-copy">
+          <p class="screen-step">Step 4</p>
+          <h2 id="save-title">Save action</h2>
+          <p>
+            The app will let the user save the final image from this screen.
+          </p>
+        </div>
+
+        <div class="panel">
+          <button class="primary-button" type="button">Save image</button>
+          <p class="placeholder-note">
+            Save behavior is a placeholder for now.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
