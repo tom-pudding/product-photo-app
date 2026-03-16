@@ -71,8 +71,13 @@
           </p>
           <div class="image-grid" id="image-grid" aria-label="Selected image previews">
           </div>
-          <button class="primary-button" data-screen-target="result">
-            Continue to result view
+          <button
+            class="primary-button"
+            id="create-result-button"
+            type="button"
+            disabled
+          >
+            Create result
           </button>
         </div>
       </section>
@@ -87,12 +92,29 @@
         </div>
 
         <div class="panel">
-          <div class="result-placeholder" aria-label="Result placeholder">
-            Result preview placeholder
+          <div
+            class="result-placeholder"
+            id="result-placeholder"
+            aria-label="Result placeholder"
+          >
+            <div>
+              <p id="result-preview-title">Result preview placeholder</p>
+              <p id="result-preview-meta">No composition data yet.</p>
+            </div>
           </div>
-          <p class="placeholder-note">
+          <p class="placeholder-note" id="result-summary">
+            No composition has been created yet.
+          </p>
+          <p class="placeholder-note" id="result-status">
             Image processing is not implemented in this step.
           </p>
+          <button
+            class="secondary-button"
+            id="back-to-gallery-button"
+            type="button"
+          >
+            Back to gallery
+          </button>
           <button class="primary-button" data-screen-target="save">
             Continue to save
           </button>
