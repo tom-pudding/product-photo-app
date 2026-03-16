@@ -141,7 +141,20 @@ input {
 .selection-status,
 .gallery-status {
   margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f4eadf;
   color: #715d4e;
+}
+
+.selection-status.is-valid {
+  background: #e4f3e7;
+  color: #1f6a34;
+}
+
+.selection-status.is-error {
+  background: #fde8e1;
+  color: #9a3f18;
 }
 
 .primary-button {
